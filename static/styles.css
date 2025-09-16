@@ -1,0 +1,271 @@
+header {
+  background-color: rgb(66, 66, 66); 
+  color: white; 
+  padding: 20px; 
+  display: flex;
+  
+}
+
+body{
+  background-color: bisque;
+  font-family: Arial, sans-serif; 
+  margin: 0;
+  padding: 0;
+}
+
+.header-link {
+  color: white;
+  text-decoration: none; 
+  margin-right: 20px; 
+ 
+}
+
+.header-link:hover {
+  text-decoration: underline; 
+}
+
+.car-container {
+  max-width: 800px; 
+  margin: 0 auto; 
+  padding: 20px; 
+}
+
+
+.car-grid {
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+  grid-gap: 20px; 
+}
+
+.car-item {
+  background-color: white; 
+  padding: 20px; 
+  border-radius: 5px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); 
+}
+
+
+.car-info {
+  text-align: center; 
+}
+
+.car-info h3 {
+  margin-bottom: 10px; 
+}
+
+.car-link {
+  display: block; 
+  color: black; 
+  text-decoration: none; 
+  margin-top: 10px; 
+}
+
+.car-link:hover {
+  text-decoration: underline; 
+}
+
+img{
+  height: 200px;
+  width: 200px;
+}
+
+.container {
+  max-width: 400px; 
+  margin: 0 auto; 
+  padding: 20px; 
+}
+
+.form-group label {
+  display: block; 
+  margin-bottom: 5px; 
+  font-weight: bold; 
+}
+
+.form-group input,.form-group input {
+  width: 100%; 
+  padding: 10px; 
+  border: 1px solid #cecece; 
+  border-radius: 5px; 
+}
+
+.submit {
+  display: block; 
+  width: 100%; 
+  padding: 10px; 
+  background-color: #333; 
+  color: white; 
+  border: none;
+  cursor: pointer; 
+}
+
+.submit:hover {
+  background-color: #515151; 
+}
+h1{
+  text-align: center;
+}
+
+.filter-section {
+  background-color:bisque;
+  padding: 20px;
+  border-radius: 5px;
+  position:fixed;
+  top: 20%; 
+  left: 0;
+  transform: translateY(-20%);
+  transform: translateX(30%);
+}
+
+
+.filter-form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.filter-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.filter-form .submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter-form .submit-button:hover {
+  background-color: #555;
+}
+
+
+.product{
+  justify-content: center;
+}
+
+.product-table{
+  max-width: 800px; 
+  margin: 0 auto; 
+  padding: 20px; 
+}
+
+.product-image{
+  height: 400px;
+  width: 600px;
+}
+
+table{
+  border-collapse:collapse ;
+
+}
+
+th, td{
+  border: 1px solid black;
+}
+
+.main-container{
+  background: url('background.jpg') no-repeat center center/cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.main-img{
+ width: 100%;
+ height: 100%;
+}
+.img-txt{
+  position: absolute;
+  margin-top: auto;
+  margin-left: auto;
+  transform: scale(1.1);
+  font-size: 100px;
+  border: 1px;
+  padding: 0.2em;
+  border-radius: 16px;
+}
+
+
+.cart-container{
+  max-width: 800px;
+  margin: 0,auto;
+
+}
+
+.cart-table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom:20px ;
+}
+
+.cart-table tr{
+  border-bottom: 1px solid black;
+
+}
+
+.cart-table td{
+  padding: 8px;
+}
+
+.end{
+  text-align: center;
+  font-size: 100px;
+}
+
+#contact {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 40px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form{
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-button {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-button:hover {
+  background-color: #0056b3;
+}
+
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position:fixed;
+  bottom: 0;
+  width: 100%;
+}

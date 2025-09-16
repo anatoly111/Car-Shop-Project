@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title> stuff </title>
+    <link href="{{url_for('static',filename = 'styles.css')}}" rel="stylesheet">
+</head>
+<body>
+    <header>
+        {% if g.user %}
+            <p><a class="header-link" href="{{ url_for('logout') }}">Logout</a></p>
+            <p><a class="header-link" href="{{ url_for('cars') }}">Menu</a></p>
+            <p><a class="header-link" href="{{url_for('cart')}}">Cart</a></p>
+            <p><a  class="header-link" href="{{url_for('index')}}">Home</a></p>
+            <p><a class="header-link" href="{{url_for('profile')}}">Profile</a></p>
+            <p><a class="header-link" href="{{url_for('contact')}}">Contact us</a></p>
+        {% else %}
+            <p><a class="header-link" href="{{url_for('register')}}">Register</a></p>
+            <p><a class="header-link" href="{{url_for('login')}}">Login</a></p>
+            <p><a class="header-link" href="{{url_for('index')}}">Home</a></p>
+            <p><a class="header-link" href="{{url_for('cart')}}">Cart</a></p>
+            <p><a class="header-link" href="{{url_for('contact')}}">Contact us</a></p>
+            <p><a  href="{{ url_for('cars') }}">Menu</a></p>
+        {% endif %}
+    </header>
+    {% block main_content %}
+
+    {% endblock %}
+</body>
+<footer>
+    <p>&copy; 2025 Car Shop. All Rights Reserved.</p>
+</footer>
+</html>

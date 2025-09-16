@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block main_content %}
+<h1>Welcome</h1>
+<section class="main-container">
+    <h2>Find Your Dream Car Today</h2>
+    <p>Best deals on top-quality cars</p>
+    <a href="{{ url_for('cars') }}" class="btn">Browse Cars</a>
+</section>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block main_content %}
+<h1>
+    Your cart
+</h1>
+<section class="cart-container">
+{% if cart %}
+<table class="cart-table">
+    {% for car_id in cart%}
+    <tr>
+        <td>
+            {{ names[car_id] }}
+            {{ cart[car_id] }}
+            <a href="{{ url_for('remove_cart',car_id = car_id)}}">remove</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+<p>Total: {{ total }}€</p>
+<a href="{{ url_for('checkout')}}">checkout</a>
+
+{% else %}
+    <p>Your cart is empty</p>
+{% endif %}
+</section>
+{% endblock %}

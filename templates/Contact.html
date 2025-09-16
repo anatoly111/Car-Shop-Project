@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block main_content %}
+<section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contact-form" action="" method="post" novalidate>
+        {{ form.hidden_tag()}}
+        {{ form.name.label}}
+        {{ form.name() }}
+        {{ form.email.label}}
+        {{ form.email() }}
+        {{ form.message.label}}
+        {{ form.message() }}
+        {{ form.submit(class="contact-button") }}
+        {% for error in form.email.errors %}
+        <p class="error">{{ error }}</p>
+        {% endfor %}
+        {% for error in form.name.errors %}
+        <p class="error">{{ error }}</p>
+        {% endfor %}
+        {% for error in form.message.errors %}
+        <p class="error">{{ error }}</p>
+        {% endfor %}
+    </form>
+</section>
+
+
+{% endblock %}

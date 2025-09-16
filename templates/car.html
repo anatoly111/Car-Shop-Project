@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block main_content %}
+
+<h1>{{ car["name"] }}</h1>
+
+<section class="product-table">
+    </p>
+    <img class="product-image" src="{{ url_for('static', filename = car['image'])}}" alt="the car" />
+    <p>
+    <table class="product">
+        <tr>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td> {{car["price"]}}€</td>
+        </tr>
+        <tr>
+            <th> Description</th>
+        </tr>
+        <tr>
+            <td>{{car["description"]}}</td>
+        </tr>
+    </table>
+    <a href="{{ url_for('add_to_cart',car_id = car['car_id']) }}">Add to cart</a>
+</section>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block main_content %}
+
+<section  class="container">
+<form class="login" action="" method="post" novalidate>
+    {{ form.hidden_tag()}}
+    <div class="form-group">
+    {{ form.user_id.label}}
+    {{ form.user_id()}}
+    {% for error in form.user_id.error %}
+        {{error}}
+    {% endfor %}
+    </div>
+    <br>
+    <div class="form-group">
+    {{ form.password.label}}
+    {{ form.password()}}
+    {% for error in form.password.error %}
+        {{error}}
+    {% endfor %}
+    </div>  
+    <br>
+
+        {{ form.submit(class="submit") }}
+   
+</form>
+<a href="{{url_for('register')}}">Create account</a>
+<br>
+<a href="{{ url_for('edit')}}">Forgot username?</a>
+<br>
+<a href="{{ url_for('edit_pass')}}">Forgot password?</a>
+</section>
+{% endblock %}
